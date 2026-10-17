@@ -135,7 +135,7 @@
                     <i class="fa-solid fa-globe"></i> Google Search তথ্য
                 </label>
                 <div class="h-3 w-px bg-slate-800"></div>
-                <span class="text-slate-500">মডেল: <strong class="text-slate-300">gemini-3-flash-preview</strong></span>
+                <span class="text-slate-500">মডেল: <strong class="text-slate-300">gemini-1.5-flash</strong></span>
             </div>
 
             <!-- Text Area & Action Buttons -->
@@ -203,18 +203,15 @@
 
     <!-- Application Script Logic -->
     <script>
-        // State Variables
         let apiKey = localStorage.getItem('salsabilah_gemini_key') || "";
         let systemInstruction = localStorage.getItem('salsabilah_system_prompt') || "You are Salsabilah Gemini 3 Assistant, a friendly, smart, and helpful AI assistant proficient in Bengali and English.";
         let selectedBase64Image = null;
         let isRecording = false;
         let recognition = null;
 
-        // Initialize Settings
         document.getElementById('apiKeyInput').value = apiKey;
         document.getElementById('systemPromptInput').value = systemInstruction;
 
-        // Prompt for API Key if not set
         window.onload = () => {
             if (!apiKey) {
                 toggleModal('settingsModal');
@@ -222,14 +219,12 @@
             initSpeechRecognition();
         };
 
-        // Modal Handler
         function toggleModal(id) {
             const modal = document.getElementById(id);
             modal.classList.toggle('hidden');
             modal.classList.toggle('flex');
         }
 
-        // Save Settings to Local Storage
         function saveSettings() {
             const key = document.getElementById('apiKeyInput').value.trim();
             const sys = document.getElementById('systemPromptInput').value.trim();
@@ -244,7 +239,6 @@
             alert('সেটিংস সফলভাবে সংরক্ষিত হয়েছে!');
         }
 
-        // Handle Image Upload & Base64
         function handleImageSelect(e) {
             const file = e.target.files[0];
             if (!file) return;
@@ -270,7 +264,6 @@
             document.getElementById('imagePreviewContainer').classList.add('hidden');
         }
 
-        // Voice Typing Setup
         function initSpeechRecognition() {
             if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -317,41 +310,71 @@
             btn.classList.remove('bg-red-500/20', 'text-red-400', 'animate-pulse');
         }
 
-        // Send Message Handler
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+
+        function handleKeyDown(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                sendMessage();
+            }
+        }
+
+        function clearChat() {
+            document.getElementById('chatBox').innerHTML = `
+                <div class="flex gap-3 max-w-[85%]">
+                    <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white shrink-0">
+                        <i class="fa-solid fa-robot text-sm"></i>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl rounded-tl-none shadow-md space-y-2">
+                        <p class="text-slate-200">চ্যাট হিস্ট্রি মুছে ফেলা হয়েছে। নতুনভাবে শুরু করুন!</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
         async function sendMessage() {
+            if (!apiKey) {
+                alert('দয়া করে প্রথমে Settings থেকে আপনার Gemini API Key সেট করুন।');
+                toggleModal('settingsModal');
+                return;
+            }
+
             const input = document.getElementById('userInput');
             const text = input.value.trim();
 
             if (!text && !selectedBase64Image) return;
 
-            // Append User Message to UI
             appendUserMessage(text, selectedBase64Image ? document.getElementById('imagePreview').src : null);
             
-            // Clear Inputs
             input.value = '';
             autoResize(input);
             const imagePayload = selectedBase64Image;
             removeImage();
 
-            // Create Placeholder for AI Response
             const aiMessageDiv = appendAiLoadingMessage();
             const useSearch = document.getElementById('searchGrounding').checked;
 
             try {
-                // Call Gemini 3 API
                 const responseData = await fetchGeminiResponse(text, imagePayload, useSearch);
                 renderAiResponse(aiMessageDiv, responseData.text, responseData.sources);
             } catch (err) {
                 aiMessageDiv.querySelector('.content').innerHTML = `
                     <p class="text-red-400 font-medium">ত্রুটি ঘটেছে:</p>
-                    <p class="text-xs text-red-300 mt-1">${err.message}</p>
+                    <p class="text-xs text-red-300 mt-1">${escapeHtml(err.message)}</p>
                 `;
             }
         }
 
-        // Gemini API Fetch Function
         async function fetchGeminiResponse(promptText, imageObj, useGrounding) {
-            const modelName = 'gemini-3-flash-preview';
+            const modelName = 'gemini-1.5-flash';
             const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
 
             const parts = [];
@@ -374,7 +397,6 @@
                 }
             };
 
-            // Grounding with Google Search
             if (useGrounding) {
                 payload.tools = [{ "google_search": {} }];
             }
@@ -399,7 +421,6 @@
 
             const responseText = candidate.content?.parts?.[0]?.text || "";
             
-            // Extract Search Citations
             let sources = [];
             const groundingMeta = candidate.groundingMetadata;
             if (groundingMeta && groundingMeta.groundingAttributions) {
@@ -414,7 +435,6 @@
             return { text: responseText, sources: sources };
         }
 
-        // Render Functions
         function appendUserMessage(text, imageSrc) {
             const chatBox = document.getElementById('chatBox');
             const msgDiv = document.createElement('div');
@@ -424,21 +444,4 @@
 
             msgDiv.innerHTML = `
                 <div class="bg-sky-600 text-white p-3.5 rounded-2xl rounded-tr-none shadow-md space-y-1">
-                    ${imageHtml}${text ? `<p class="text-sm leading-relaxed whitespace-pre-wrap">${escapeHtml(text)}</p>` : ''}
-                </div>
-            `;
-            chatBox.appendChild(msgDiv);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        function appendAiLoadingMessage() {
-            const chatBox = document.getElementById('chatBox');
-            const msgDiv = document.createElement('div');
-            msgDiv.className = "flex gap-3 max-w-[85%]";
-
-            msgDiv.innerHTML = `
-                <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white shrink-0">
-                    <i class="fa-solid fa-robot text-sm"></i>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl rounded-tl-none shadow-md space-y-2 w-full">
-                    <div class="content prose prose-invert max-w-none text
+                    ${imageHtml}${text ? `<p class="text-sm leading-relaxed whites
