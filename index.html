@@ -1,99 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn" class="dark">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ABC123XYZ');
-
-      function trackWhatsApp() {
-        gtag('event', 'contact_click', {
-          'event_category': 'Engagement',
-          'event_label': 'WhatsApp Chat'
-        });
-      }
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="Official portal of Salsabilah Amin Empire. Strategic research, industrial resilience, and the 'Abbaba' legacy.">
-    <meta property="og:title" content="Salsabilah Amin Empire | The Empress's Decree">
-    <meta property="og:description" content="From Chuadanga to a 5.91 Crore empire. Documenting a father's love and a strategic vision.">
-    <meta property="og:image" content="6528.jpg"> 
-    <meta property="og:type" content="website">
-
-    <title>Salsabilah Amin Empire | The Empress's Decree</title>
-    
+    <title>Salsabilah Gemini 3 Assistant</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        :root {
-            --primary-red: #e74c3c;
-            --whatsapp-green: #25D366;
-            --dark-blue: #2c3e50;
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
         }
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; padding: 20px; margin: 0; }
-        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
-        
-        h1 { color: var(--dark-blue); border-bottom: 2px solid var(--primary-red); padding-bottom: 10px; }
-        
-        .nav-menu { margin-bottom: 30px; display: flex; gap: 10px; }
-        .nav-link { color: var(--primary-red); text-decoration: none; font-weight: bold; border: 1px solid var(--primary-red); padding: 8px 18px; border-radius: 5px; transition: 0.3s; }
-        .nav-link:hover { background: var(--primary-red); color: white; }
-        
-        /* Interactive WhatsApp Button */
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--whatsapp-green);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 25px 0;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            animation: pulse 2s infinite;
-            transition: 0.3s;
+        ::-webkit-scrollbar-track {
+            background: transparent;
         }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 9999px;
         }
-        .whatsapp-btn:hover { transform: scale(1.05); background-color: #128C7E; }
-        
-        .highlight { color: var(--primary-red); font-weight: bold; }
-        .abbaba { font-size: 24px; color: #8e44ad; font-style: italic; margin: 20px 0; display: block; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
+        .prose pre {
+            background-color: #0f172a !important;
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            color: #f8fafc;
+            overflow-x: auto;
+        }
+        .prose code {
+            color: #38bdf8;
+            background-color: rgba(15, 23, 42, 0.6);
+            padding: 0.15rem 0.3rem;
+            border-radius: 0.25rem;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>The Empress's Decree: <span class="highlight">Salsabilah Amin Empire</span></h1>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-200">
+
+    <!-- Header Navigation -->
+    <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 sticky top-0 z-50 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-sky-500/20">
+                <i class="fa-solid font-bold text-lg">S3</i>
+            </div>
+            <div>
+                <h1 class="font-bold text-lg leading-tight bg-gradient-to-r from-sky-400 to-indigo-300 bg-clip-text text-transparent">
+                    Salsabilah Gemini 3 Assistant
+                </h1>
+                <p class="text-xs text-slate-400 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Powered by Gemini 3 Flash
+                </p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <!-- Settings Modal Trigger -->
+            <button onclick="toggleModal('settingsModal')" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-sm flex items-center gap-2">
+                <i class="fa-solid fa-key text-amber-400"></i>
+                <span class="hidden sm:inline">API Key</span>
+            </button>
+            <!-- Clear Chat -->
+            <button onclick="clearChat()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-sm" title="Clear Chat">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-4xl w-full mx-auto p-4 flex flex-col justify-between overflow-hidden">
         
-        <nav class="nav-menu">
-            <a href="blog.html" class="nav-link">Empire Chronicles</a>
-            <a href="portfolio.html" class="nav-link">Project Gallery</a>
-        </nav>
+        <!-- Chat History Window -->
+        <div id="chatBox" class="flex-1 overflow-y-auto space-y-4 pr-1 pb-4">
+            <!-- Initial Welcome Message -->
+            <div class="flex gap-3 max-w-[85%]">
+                <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white shrink-0">
+                    <i class="fa-solid fa-robot text-sm"></i>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl rounded-tl-none shadow-md space-y-2">
+                    <p class="text-slate-200">
+                        আসসালামু আলাইকুম! আমি <strong>Salsabilah Gemini 3 Assistant</strong>। 
+                        আপনাকে সাহায্য করার জন্য প্রস্তুত। যেকোনো প্রশ্ন জিজ্ঞেস করতে পারেন অথবা ছবি আপলোড করে বিশ্লেষণ করতে পারেন!
+                    </p>
+                    <div class="text-[11px] text-slate-500 flex items-center gap-2 pt-1 border-t border-slate-800">
+                        <span>Gemini 3 Flash</span> • <span>বাংলা ও ইংরেজি সমর্থিত</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <p>From the heart of Chuadanga to a <span class="highlight">5.91 Crore</span> empire.</p>
+        <!-- Attachment Preview Bar -->
+        <div id="imagePreviewContainer" class="hidden mb-2 p-2 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-between w-fit gap-3">
+            <div class="flex items-center gap-2">
+                <img id="imagePreview" src="" alt="Preview" class="h-12 w-12 object-cover rounded-lg border border-slate-700">
+                <div class="text-xs">
+                    <p id="fileName" class="font-medium text-slate-300 truncate max-w-[150px]">image.png</p>
+                    <p class="text-slate-500">সংযুক্ত ছবি</p>
+                </div>
+            </div>
+            <button onclick="removeImage()" class="p-1.5 text-slate-400 hover:text-red-400 rounded-lg hover:bg-slate-800 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
 
-        <a href="https://wa.me/8801711995940" target="_blank" class="whatsapp-btn" onclick="trackWhatsApp()">
-            💬 Chat with Salsabilah Amin Ltd
-        </a>
+        <!-- Input Control Panel -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-2.5 shadow-xl">
+            <!-- Options Strip -->
+            <div class="flex items-center gap-4 px-2 pb-2 mb-1 border-b border-slate-800 text-xs text-slate-400">
+                <label class="flex items-center gap-1.5 cursor-pointer hover:text-sky-400 transition select-none">
+                    <input type="checkbox" id="searchGrounding" class="rounded bg-slate-800 border-slate-700 text-sky-500 focus:ring-sky-500 focus:ring-offset-slate-900">
+                    <i class="fa-solid fa-globe"></i> Google Search তথ্য
+                </label>
+                <div class="h-3 w-px bg-slate-800"></div>
+                <span class="text-slate-500">মডেল: <strong class="text-slate-300">gemini-3-flash-preview</strong></span>
+            </div>
 
-        <span class="abbaba">"Abbaba..." — The divine call that changed everything.</span>
+            <!-- Text Area & Action Buttons -->
+            <div class="flex items-end gap-2">
+                <!-- File Upload Button -->
+                <button onclick="document.getElementById('fileInput').click()" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition shrink-0" title="ছবি যোগ করুন">
+                    <i class="fa-solid fa-paperclip"></i>
+                </button>
+                <input type="file" id="fileInput" accept="image/*" class="hidden" onchange="handleImageSelect(event)">
 
-        <article class="content">
-            <h3>Symphony of the Empire (2026 Masterpiece)</h3>
-            <p>This document serves as the ultimate proof of our journey and spiritual bond.</p>
-        </article>
+                <!-- Mic Voice Typing Input -->
+                <button id="micBtn" onclick="toggleVoiceInput()" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition shrink-0" title="ভয়েস টাইপিং">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
 
-        <footer class="footer">
-            <p>© 2026 Salsabilah Amin Empire. Managed by Sohag.</p>
-        </footer>
+                <!-- Input Field -->
+                <textarea id="userInput" rows="1" placeholder="আপনার বার্তাটি লিখুন..." 
+                    class="flex-1 bg-transparent text-slate-100 placeholder-slate-500 p-2 focus:outline-none resize-none max-h-32 text-sm leading-relaxed"
+                    onkeydown="handleKeyDown(event)" oninput="autoResize(this)"></textarea>
+
+                <!-- Send Button -->
+                <button id="sendBtn" onclick="sendMessage()" class="p-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold transition shrink-0 shadow-lg shadow-sky-500/20">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="font-bold text-lg text-slate-200 flex items-center gap-2">
+                    <i class="fa-solid fa-gear text-sky-400"></i> সেটিংস ও API Key
+                </h3>
+                <button onclick="toggleModal('settingsModal')" class="text-slate-400 hover:text-slate-200">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">Gemini API Key</label>
+                    <input type="password" id="apiKeyInput" placeholder="AIzaSy..." 
+                        class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-sky-500">
+                    <p class="text-[11px] text-slate-500 mt-1">
+                        কী-টি সম্পূর্ণ নিরাপদ থাকবে এবং আপনার ব্রাউজারের `localStorage`-এ জমা থাকবে।
+                    </p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-400 mb-1">System Instructions (ঐচ্ছিক)</label>
+                    <textarea id="systemPromptInput" rows="3" placeholder="You are a helpful Bangla speaking AI assistant..."
+                        class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-slate-200 focus:outline-none focus:border-sky-500 resize-none"></textarea>
+                </div>
+            </div>
+
+            <div class="flex gap-2 justify-end pt-2">
+                <button onclick="saveSettings()" class="w-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold py-2.5 rounded-xl transition text-sm">
+                    সংরক্ষণ করুন
+                </button>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+
+    <!-- Application Script Logic -->
+    <script>
+        // State Variables
+        let apiKey = localStorage.getItem('salsabilah_gemini_key') || "";
+        let systemInstruction = localStorage.getItem('salsabilah_system_prompt') || "You are Salsabilah Gemini 3 Assistant, a friendly, smart, and helpful AI assistant proficient in Bengali and English.";
+        let selectedBase64Image = null;
+        let isRecording = false;
+        let recognition = null;
+
+        // Initialize Settings
+        document.getElementById('apiKeyInput').value = apiKey;
+        document.getElementById('systemPromptInput').value = systemInstruction;
+
+        // Prompt for API Key if not set
+        window.onload = () => {
+            if (!apiKey) {
+                toggleModal('settingsModal');
+            }
+            initSpeechRecognition();
+        };
+
+        // Modal Handler
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+        }
+
+        // Save Settings to Local Storage
+        function saveSettings() {
+            const key = document.getElementById('apiKeyInput').value.trim();
+            const sys = document.getElementById('systemPromptInput').value.trim();
+            
+            apiKey = key;
+            systemInstruction = sys || "You are a helpful AI assistant.";
+            
+            localStorage.setItem('salsabilah_gemini_key', key);
+            localStorage.setItem('salsabilah_system_prompt', systemInstruction);
+            
+            toggleModal('settingsModal');
+            alert('সেটিংস সফলভাবে সংরক্ষিত হয়েছে!');
+        }
+
+        // Handle Image Upload & Base64
+        function handleImageSelect(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const base64Data = event.target.result.split(',')[1];
+                selectedBase64Image = {
+                    mimeType: file.type,
+                    data: base64Data
+                };
+                
+                document.getElementById('imagePreview').src = event.target.result;
+                document.getElementById('fileName').textContent = file.name;
+                document.getElementById('imagePreviewContainer').classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function removeImage() {
+            selectedBase64Image = null;
+            document.getElementById('fileInput').value = '';
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+        }
+
+        // Voice Typing Setup
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                recognition.lang = 'bn-BD';
+
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    const input = document.getElementById('userInput');
+                    input.value += (input.value ? ' ' : '') + transcript;
+                    autoResize(input);
+                    stopVoiceInput();
+                };
+
+                recognition.onerror = () => stopVoiceInput();
+                recognition.onend = () => stopVoiceInput();
+            }
+        }
+
+        function toggleVoiceInput() {
+            if (!recognition) {
+                alert('আপনার ব্রাউজারে ভয়েস সাপোর্ট সমর্থিত নয়।');
+                return;
+            }
+
+            const btn = document.getElementById('micBtn');
+            if (!isRecording) {
+                recognition.start();
+                isRecording = true;
+                btn.classList.add('bg-red-500/20', 'text-red-400', 'animate-pulse');
+            } else {
+                stopVoiceInput();
+            }
+        }
+
+        function stopVoiceInput() {
+            if (recognition && isRecording) {
+                recognition.stop();
+            }
+            isRecording = false;
+            const btn = document.getElementById('micBtn');
+            btn.classList.remove('bg-red-500/20', 'text-red-400', 'animate-pulse');
+        }
+
+        // Send Message Handler
+        async function sendMessage() {
+            const input = document.getElementById('userInput');
+            const text = input.value.trim();
+
+            if (!text && !selectedBase64Image) return;
+
+            // Append User Message to UI
+            appendUserMessage(text, selectedBase64Image ? document.getElementById('imagePreview').src : null);
+            
+            // Clear Inputs
+            input.value = '';
+            autoResize(input);
+            const imagePayload = selectedBase64Image;
+            removeImage();
+
+            // Create Placeholder for AI Response
+            const aiMessageDiv = appendAiLoadingMessage();
+            const useSearch = document.getElementById('searchGrounding').checked;
+
+            try {
+                // Call Gemini 3 API
+                const responseData = await fetchGeminiResponse(text, imagePayload, useSearch);
+                renderAiResponse(aiMessageDiv, responseData.text, responseData.sources);
+            } catch (err) {
+                aiMessageDiv.querySelector('.content').innerHTML = `
+                    <p class="text-red-400 font-medium">ত্রুটি ঘটেছে:</p>
+                    <p class="text-xs text-red-300 mt-1">${err.message}</p>
+                `;
+            }
+        }
+
+        // Gemini API Fetch Function
+        async function fetchGeminiResponse(promptText, imageObj, useGrounding) {
+            const modelName = 'gemini-3-flash-preview';
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+
+            const parts = [];
+            if (promptText) {
+                parts.push({ text: promptText });
+            }
+            if (imageObj) {
+                parts.push({
+                    inlineData: {
+                        mimeType: imageObj.mimeType,
+                        data: imageObj.data
+                    }
+                });
+            }
+
+            const payload = {
+                contents: [{ parts: parts }],
+                systemInstruction: {
+                    parts: [{ text: systemInstruction }]
+                }
+            };
+
+            // Grounding with Google Search
+            if (useGrounding) {
+                payload.tools = [{ "google_search": {} }];
+            }
+
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!res.ok) {
+                const errJson = await res.json().catch(() => ({}));
+                throw new Error(errJson.error?.message || `API Error Status: ${res.status}`);
+            }
+
+            const result = await res.json();
+            const candidate = result.candidates?.[0];
+
+            if (!candidate) {
+                throw new Error("কোন উত্তর পাওয়া যায়নি। API key চেক করুন।");
+            }
+
+            const responseText = candidate.content?.parts?.[0]?.text || "";
+            
+            // Extract Search Citations
+            let sources = [];
+            const groundingMeta = candidate.groundingMetadata;
+            if (groundingMeta && groundingMeta.groundingAttributions) {
+                sources = groundingMeta.groundingAttributions
+                    .map(attr => ({
+                        uri: attr.web?.uri,
+                        title: attr.web?.title
+                    }))
+                    .filter(s => s.uri && s.title);
+            }
+
+            return { text: responseText, sources: sources };
+        }
+
+        // Render Functions
+        function appendUserMessage(text, imageSrc) {
+            const chatBox = document.getElementById('chatBox');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = "flex gap-3 max-w-[85%] ml-auto justify-end";
+
+            let imageHtml = imageSrc ? `<img src="${imageSrc}" class="max-h-48 rounded-xl border border-slate-700 mb-2 object-cover">` : '';
+
+            msgDiv.innerHTML = `
+                <div class="bg-sky-600 text-white p-3.5 rounded-2xl rounded-tr-none shadow-md space-y-1">
+                    ${imageHtml}${text ? `<p class="text-sm leading-relaxed whitespace-pre-wrap">${escapeHtml(text)}</p>` : ''}
+                </div>
+            `;
+            chatBox.appendChild(msgDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function appendAiLoadingMessage() {
+            const chatBox = document.getElementById('chatBox');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = "flex gap-3 max-w-[85%]";
+
+            msgDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center text-white shrink-0">
+                    <i class="fa-solid fa-robot text-sm"></i>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl rounded-tl-none shadow-md space-y-2 w-full">
+                    <div class="content prose prose-invert max-w-none text
