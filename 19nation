@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>19-Nation Grid Resilience Framework | MD. AL AMIN SOHAG — SALSABILAH AMIN LIMITED</title>
+  <meta name="description" content="Technical Brief: Stress-testing sovereign digital infrastructure stability, cyber-assurance readiness, and cross-border network redundancy across 19 major global economies by MD. AL AMIN SOHAG.">
+  <meta name="keywords" content="19-Nation Grid Resilience Framework, MD AL AMIN SOHAG, SALSABILAH AMIN LIMITED, Digital Infrastructure Strategy, Industrial Resilience 4.0, BSI Knowledge">
+  <meta name="author" content="MD. AL AMIN SOHAG">
+  <link rel="canonical" href="https://salsabilah.com/19-nation-grid-resilience.html">
+
+  <!-- Open Graph / Social Media Previews -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://salsabilah.com/19-nation-grid-resilience.html">
+  <meta property="og:title" content="The 19-Nation Grid Resilience Framework: Stress-Testing Sovereign Digital Infrastructure">
+  <meta property="og:description" content="Comparative assessment of digital infrastructure stability, cyber-assurance readiness, and cross-border network redundancy across 19 major global economies.">
+
+  <!-- Structured Data (TechArticle Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "The 19-Nation Grid Resilience Framework: Stress-Testing Sovereign Digital Infrastructure",
+    "datePublished": "2026-09-27",
+    "author": {
+      "@type": "Person",
+      "name": "MD. AL AMIN SOHAG"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SALSABILAH AMIN LIMITED",
+      "identifier": "TM Reg No: 018923558"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-footer: #0b1120;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-subtle: #1e293b;
+      --border-card: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.75;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      flex: 1;
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .back-nav {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .back-nav:hover {
+      text-decoration: underline;
+    }
+
+    .article-header {
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .framework-tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.4px;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .article-body h2 {
+      color: var(--accent);
+      font-size: 1.35rem;
+      margin: 36px 0 12px 0;
+    }
+
+    .article-body p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin: 0 0 20px 0;
+    }
+
+    .article-body ul {
+      color: #cbd5e1;
+      font-size: 1.02rem;
+      padding-left: 22px;
+      margin: 0 0 24px 0;
+    }
+
+    .article-body li {
+      margin-bottom: 10px;
+    }
+
+    .article-body li strong {
+      color: var(--text-main);
+    }
+
+    .callout-box {
+      background: var(--bg-secondary);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .callout-box strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      background: var(--bg-footer);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 12px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">SALSABILAH AMIN LIMITED</a>
+      <nav class="nav-links">
+        <a href="index.html">Portal</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Research Blog</a>
+        <a href="mailto:seo@salsabilah.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="blog.html" class="back-nav">← Back to Research Archive</a>
+
+    <article>
+      <div class="article-header">
+        <span class="framework-tag">Framework 03 · 19-Nation Grid Resilience Framework</span>
+        <h1>The 19-Nation Grid Resilience Framework: Stress-Testing Sovereign Digital Infrastructure</h1>
+        <div class="meta">
+          By <strong>MD. AL AMIN SOHAG</strong> · Published September 27, 2026 · Digital Infrastructure Strategy
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          Modern industrial output relies on uninterrupted synchronization across subsea fiber corridors, cloud compute clusters, energy distribution networks, and sovereign settlement rails. A single point of failure in one jurisdiction can trigger cascading operational latency across interconnected global markets.
+        </p>
+
+        <h2>1. Comparative Scope &amp; Architecture</h2>
+        <p>
+          The <strong>19-Nation Grid Resilience Framework</strong> establishes a standardized diagnostic baseline across 19 major global economies. Rather than evaluating cybersecurity or physical grid uptime in isolation, the framework measures how rapidly national ecosystems absorb systemic shocks, reroute critical data traffic, and maintain industrial continuity under stress.
+        </p>
+
+        <div class="callout-box">
+          <strong>Core Resilience Principle</strong>
+          True infrastructure sovereignty is not measured by peak throughput under ideal conditions, but by minimum viable operational continuity during multi-node cascading disruptions.
+        </div>
+
+        <h2>2. Evaluation Pillars</h2>
+        <ul>
+          <li><strong>Cross-Border Network Redundancy:</strong> Assessing submarine cable diversity, terrestrial transit failovers, and autonomous routing independence.</li>
+          <li><strong>Cyber-Assurance &amp; Institutional Readiness:</strong> Evaluating baseline compliance standards, enterprise cyber hygiene, and incident response velocity aligned with BSI Knowledge and IASME assurance principles.</li>
+          <li><strong>Energy-to-Compute Coupling:</strong> Analyzing grid stability dependencies for high-density AI data centers and automated manufacturing hubs.</li>
+          <li><strong>Identity &amp; Settlement Continuity:</strong> Measuring the fault tolerance of verified digital identity layers during regional connectivity degradation.</li>
+        </ul>
+
+        <h2>3. Strategic Application</h2>
+        <p>
+          At <strong>SALSABILAH AMIN LIMITED</strong>, insights from the 19-Nation Grid Resilience Framework inform enterprise infrastructure architecture and cross-border logistics planning—providing decision-makers with empirical risk weights when deploying Industrial Resilience 4.0 systems globally.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Portal</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Research Blog</a>
+      <a href="https://github.com/SalsabilahEmpires" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <div>© 2026 <strong>SALSABILAH AMIN LIMITED</strong>. All Rights Reserved.</div>
+  </footer>
+
+</body>
+</html>
