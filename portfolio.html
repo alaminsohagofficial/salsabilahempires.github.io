@@ -11,41 +11,84 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic Portfolio | Salsabilah Amin Empire</title>
+    <title>Strategic Portfolio | SALSABILAH AMIN LIMITED</title>
+    <meta name="description" content="Strategic research portfolio of MD. AL AMIN SOHAG, showcasing the SOHAG Filter, Digit Theory, and Circuit to Start Up scaling milestones.">
+    <link rel="canonical" href="https://salsabilah.com/portfolio.html">
+
     <style>
         :root {
             --primary: #38bdf8;
             --accent: #2dd4bf;
-            --bg: #020617;
-            --card: #0f172a;
-            --text: #f1f5f9;
-            --whatsapp: #25D366;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
         }
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); color: var(--text); padding: 60px 20px; line-height: 1.8; }
-        .container { max-width: 1000px; margin: auto; }
+        
+        * { box-sizing: border-box; }
+        
+        body { 
+            margin: 0; 
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            padding: 60px 20px; 
+            line-height: 1.8; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container { max-width: 1000px; margin: auto; width: 100%; }
+        
         .header { text-align: center; margin-bottom: 50px; }
-        .header h1 { color: var(--primary); font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .header h1 { color: var(--primary); font-size: clamp(2rem, 4vw, 2.5rem); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px 0; }
+        .header p { color: var(--text-muted); font-size: 1.05rem; margin: 0; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
-        .project-card { background: var(--card); padding: 30px; border-radius: 20px; border: 1px solid #1e293b; transition: 0.3s; position: relative; overflow: hidden; }
-        .project-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1); }
         
-        .tag { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
-        h3 { color: var(--text); margin: 15px 0 10px 0; font-size: 1.4rem; }
-        .description { color: #94a3b8; font-size: 1rem; margin-bottom: 20px; }
-        .milestone { color: var(--accent); font-weight: bold; font-size: 0.9rem; border-top: 1px solid #1e293b; padding-top: 15px; display: block; }
+        .project-card { 
+            background: var(--card); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid var(--border); 
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; 
+        }
+        
+        .project-card:hover { 
+            border-color: var(--primary); 
+            transform: translateY(-4px); 
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.1); 
+        }
+        
+        .tag { 
+            background: rgba(56, 189, 248, 0.12); 
+            color: var(--primary); 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            border: 1px solid rgba(56, 189, 248, 0.25);
+        }
+        
+        h3 { color: var(--text); margin: 16px 0 10px 0; font-size: 1.35rem; }
+        .description { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 20px; }
+        .milestone { color: var(--accent); font-weight: 600; font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 15px; display: block; }
 
-        .back-link { display: block; text-align: center; margin-top: 60px; color: var(--primary); text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .back-link:hover { color: var(--accent); }
+        .back-link { display: block; text-align: center; margin-top: 60px; color: var(--primary); text-decoration: none; font-weight: 600; transition: color 0.2s ease; }
+        .back-link:hover { color: var(--accent); text-decoration: underline; }
         
-        footer { text-align: center; margin-top: 80px; color: #64748b; font-size: 0.8rem; border-top: 1px solid #1e293b; padding-top: 20px; }
+        footer { text-align: center; margin-top: 80px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 24px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>Strategic Portfolio</h1>
-            <p style="color: #64748b;">Industrialization of Logic & Infrastructure</p>
+            <p>Industrialization of Logic & Infrastructure</p>
         </div>
 
         <div class="grid">
@@ -59,14 +102,14 @@
             <div class="project-card">
                 <span class="tag">Electronics</span>
                 <h3>Circuit to Start Up</h3>
-                <p class="description">Transformation of experimental electronics into a scaled commercial empire.</p>
+                <p class="description">Transformation of experimental electronics into a scaled commercial enterprise and industrial blueprint.</p>
                 <span class="milestone">Milestone: 5.91 Crore Turnover</span>
             </div>
 
             <div class="project-card">
                 <span class="tag">Economic Theory</span>
                 <h3>The Digit Theory</h3>
-                <p class="description">Exploring digital identity and currency as dynamic variables within economic systems.</p>
+                <p class="description">Exploring digital identity and currency as dynamic variables within structured economic systems.</p>
                 <span class="milestone">Phase: Research Publication</span>
             </div>
         </div>
@@ -75,7 +118,7 @@
     </div>
 
     <footer>
-        © 2026 Salsabilah Amin Empires Ltd | Verified by Sohag
+        © 2026 <strong>SALSABILAH AMIN LIMITED</strong> | Verified by Sohag
     </footer>
 </body>
 </html>
