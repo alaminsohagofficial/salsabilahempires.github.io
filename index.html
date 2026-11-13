@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MD. AL AMIN SOHAG | Writer & Digital Identity Builder</title>
-  <meta name="description" content="Official website of MD. AL AMIN SOHAG. Writer, thinker, and digital identity builder exploring literature and technology.">
-  <meta name="keywords" content="MD AL AMIN SOHAG, Salsabilah, Salsabilah Empires, Writer, Digital Identity, Blog">
+  <title>MD. AL AMIN SOHAG | Strategic Researcher & Founder of SALSABILAH AMIN LIMITED</title>
+  <meta name="description" content="Official strategic research portal of MD. AL AMIN SOHAG, Founder of SALSABILAH AMIN LIMITED. Industrial resilience frameworks, Digit Theory, SOHAG Filter, and digital infrastructure strategy.">
+  <meta name="keywords" content="MD AL AMIN SOHAG, SALSABILAH AMIN LIMITED, Digit Theory, SOHAG Filter, 19-Nation Grid Resilience Framework, Industrial Resilience 4.0">
   <meta name="author" content="MD. AL AMIN SOHAG">
   <link rel="canonical" href="https://salsabilah.com/">
 
   <!-- Open Graph / Social Media Previews -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://salsabilah.com/">
-  <meta property="og:title" content="MD. AL AMIN SOHAG | Writer & Digital Identity Builder">
-  <meta property="og:description" content="Official website of MD. AL AMIN SOHAG. Exploring literature, technology, and the future of digital identity.">
+  <meta property="og:title" content="MD. AL AMIN SOHAG | Strategic Researcher & Founder">
+  <meta property="og:description" content="Central hub for industrial resilience frameworks, digital infrastructure strategy, and next-generation economic systems modeling by SALSABILAH AMIN LIMITED.">
 
-  <!-- Structured Data (Person Schema) -->
+  <!-- Structured Data (Person & Organization Schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,11 +24,18 @@
     "name": "MD. AL AMIN SOHAG",
     "url": "https://salsabilah.com/",
     "email": "mailto:seo@salsabilah.com",
-    "jobTitle": "Writer & Digital Identity Builder",
+    "jobTitle": "Strategic Researcher & Founder",
     "worksFor": {
       "@type": "Organization",
-      "name": "Salsabilah Empires"
+      "name": "SALSABILAH AMIN LIMITED",
+      "identifier": "TM Reg No: 018923558"
     },
+    "knowsAbout": [
+      "Industrial Resilience 4.0",
+      "Digital Infrastructure Strategy",
+      "Economic Systems Modeling",
+      "Strategic Logistics"
+    ],
     "sameAs": [
       "https://github.com/SalsabilahEmpires"
     ]
@@ -45,6 +52,7 @@
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border-subtle: #1e293b;
+      --border-card: #334155;
     }
 
     * {
@@ -59,18 +67,23 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg-primary);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* Minimal Top Header */
+    /* Navigation */
     header {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .nav-container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -86,32 +99,37 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       transition: color 0.2s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:hover {
       color: var(--accent);
     }
 
-    /* Main Content */
+    /* Main Layout */
     main {
       flex: 1;
-      max-width: 900px;
+      max-width: 960px;
       width: 100%;
       margin: 0 auto;
-      padding: 70px 20px;
-      text-align: center;
+      padding: 60px 20px;
     }
 
-    .badge {
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .entity-badge {
       display: inline-block;
       padding: 5px 14px;
       background: rgba(56, 189, 248, 0.1);
@@ -120,14 +138,13 @@
       border-radius: 999px;
       font-size: 0.82rem;
       font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 20px;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(2.1rem, 5vw, 3rem);
-      color: var(--text-main);
-      margin: 0 0 12px 0;
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      margin: 0 0 10px 0;
       letter-spacing: -0.5px;
     }
 
@@ -135,38 +152,36 @@
       color: var(--accent);
     }
 
-    .tagline {
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      font-weight: 400;
+    .subtitle {
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
       color: #cbd5e1;
-      margin: 0 0 24px 0;
+      font-weight: 400;
+      margin: 0 0 22px 0;
     }
 
-    .intro {
+    .overview {
       color: var(--text-muted);
-      font-size: 1.08rem;
-      max-width: 640px;
-      margin: 0 auto 36px auto;
+      max-width: 720px;
+      margin: 0 auto 32px auto;
+      font-size: 1.05rem;
     }
 
-    /* Buttons */
     .btn-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
-      margin-bottom: 72px;
+      gap: 14px;
     }
 
     .btn {
       display: inline-block;
-      padding: 13px 28px;
+      padding: 12px 26px;
       background: var(--accent);
       color: #0f172a;
       text-decoration: none;
       border-radius: 6px;
       font-weight: 600;
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
@@ -186,34 +201,107 @@
       color: var(--accent-hover);
     }
 
-    /* Three Pillars Grid */
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      text-align: left;
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 48px;
+    /* Section Headings */
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .pillar-card {
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      color: var(--text-main);
+      margin: 0 0 8px 0;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      margin: 0 0 28px 0;
+      font-size: 0.98rem;
+    }
+
+    /* Frameworks Grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
       background: var(--bg-secondary);
-      border: 1px solid #334155;
+      border: 1px solid var(--border-card);
       border-radius: 8px;
       padding: 24px;
     }
 
-    .pillar-card h3 {
+    .card-num {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .card h3 {
       margin: 0 0 10px 0;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      color: var(--text-main);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    /* Two-Column Grid for Credentials & Focus/Publications */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .clean-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .clean-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .clean-list li:last-child {
+      border-bottom: none;
+    }
+
+    .clean-list strong {
       color: var(--accent);
     }
 
-    .pillar-card p {
-      margin: 0;
-      font-size: 0.94rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+    /* Focus Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .tag {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-card);
+      color: #cbd5e1;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.88rem;
     }
 
     /* Footer */
@@ -247,55 +335,103 @@
 
   <header>
     <div class="nav-container">
-      <a href="index.html" class="logo">SALSABILAH</a>
+      <a href="index.html" class="logo">SALSABILAH AMIN LIMITED</a>
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#credentials">Credentials</a>
+        <a href="blog.html">Research Blog</a>
         <a href="mailto:seo@salsabilah.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="badge">Salsabilah Empires</div>
-    <h1>MD. AL AMIN <span>SOHAG</span></h1>
-    <h2 class="tagline">Writer · Thinker · Digital Identity Builder</h2>
+    <!-- Hero & Strategic Overview -->
+    <div class="hero">
+      <div class="entity-badge">SALSABILAH AMIN LIMITED</div>
+      <h1>MD. AL AMIN <span>SOHAG</span></h1>
+      <h2 class="subtitle">Strategic Researcher | Founder of SALSABILAH AMIN LIMITED</h2>
 
-    <p class="intro">
-      Welcome to my official corner of the web. I write essays and build independent digital spaces exploring the intersection of literature, technology, and human identity.
-    </p>
+      <p class="overview">
+        Central hub for industrial resilience frameworks, digital infrastructure strategy, and next-generation economic systems modeling—developing robust mathematical frameworks and strategic logistics models for global ecosystems.
+      </p>
 
-    <div class="btn-group">
-      <a href="blog.html" class="btn">Read My Blog</a>
-      <a href="mailto:seo@salsabilah.com" class="btn btn-outline">Get in Touch</a>
+      <div class="btn-group">
+        <a href="blog.html" class="btn">Explore Research &amp; Essays</a>
+        <a href="https://github.com/SalsabilahEmpires" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub Repository</a>
+      </div>
     </div>
 
-    <section class="pillars" aria-label="Core Focus Areas">
-      <div class="pillar-card">
-        <h3>Literature</h3>
-        <p>Long-form reflections, storytelling, and critical essays examining culture, thought, and timeless human narratives.</p>
-      </div>
+    <!-- Research Frameworks -->
+    <section id="frameworks">
+      <h2 class="section-title">Research Frameworks</h2>
+      <p class="section-desc">Core mathematical, logistical, and infrastructure resilience models.</p>
 
-      <div class="pillar-card">
-        <h3>Technology</h3>
-        <p>Exploring how modern web architecture, search ecosystems, and emerging tools shape how we publish and connect.</p>
-      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="card-num">Framework 01</span>
+          <h3>Digit Theory</h3>
+          <p>A conceptual mathematical framework exploring the role of money and digital identity as dynamic variables within structured economic systems.</p>
+        </div>
 
-      <div class="pillar-card">
-        <h3>Digital Identity</h3>
-        <p>Helping individuals and creators establish sovereign, lasting footprints on the open web beyond fleeting algorithms.</p>
+        <div class="card">
+          <span class="card-num">Framework 02</span>
+          <h3>SOHAG Filter</h3>
+          <p>A strategic logistics and decision-making model designed to simplify and optimize complex industrial and operational processes.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-num">Framework 03</span>
+          <h3>19-Nation Grid Resilience Framework</h3>
+          <p>In-depth research and analysis of digital infrastructure resilience across major global economies and technological ecosystems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporate Identity & Focus/Publications -->
+    <section id="credentials">
+      <div class="grid-2">
+        <!-- Credentials -->
+        <div class="card">
+          <h2 class="section-title">Corporate Identity &amp; Credentials</h2>
+          <p class="section-desc">Primary operating entity: <strong>SALSABILAH AMIN LIMITED</strong></p>
+          <ul class="clean-list">
+            <li><strong>Registered Trade Mark:</strong> Reg No: 018923558</li>
+            <li><strong>Compliance:</strong> Cyber Essentials (Micro) Certified</li>
+            <li><strong>Verification:</strong> Blockmark Verified Identity | IASME Consortium Audited</li>
+            <li><strong>Standards:</strong> Aligned with BSI (British Standards Institution) Knowledge frameworks</li>
+          </ul>
+        </div>
+
+        <!-- Focus & Publications -->
+        <div class="card">
+          <h2 class="section-title">Areas of Focus</h2>
+          <div class="tags" style="margin-top: 14px;">
+            <span class="tag">Industrial Resilience 4.0</span>
+            <span class="tag">Digital Infrastructure Strategy</span>
+            <span class="tag">Artificial Intelligence Systems</span>
+            <span class="tag">Economic Systems Modeling</span>
+            <span class="tag">Strategic Logistics &amp; IP</span>
+          </div>
+
+          <h2 class="section-title" style="margin-top: 24px;">Publications</h2>
+          <ul class="clean-list">
+            <li><em>Circuit to Start Up</em></li>
+            <li><em>The Empress's Legacy</em></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
+      <a href="index.html">Portal</a>
+      <a href="blog.html">Research Blog</a>
       <a href="https://github.com/SalsabilahEmpires" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="mailto:seo@salsabilah.com">Email</a>
+      <a href="mailto:seo@salsabilah.com">seo@salsabilah.com</a>
     </div>
-    <div>© 2026 MD. AL AMIN SOHAG | Salsabilah Empires</div>
+    <div>© 2026 <strong>SALSABILAH AMIN LIMITED</strong>. All Rights Reserved.</div>
   </footer>
 
 </body>
