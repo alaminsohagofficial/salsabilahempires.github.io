@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digit Theory | MD. AL AMIN SOHAG — SALSABILAH AMIN LIMITED</title>
+  <meta name="description" content="Technical Brief: Modeling money and digital identity as coupled, dynamic variables within structured economic systems by MD. AL AMIN SOHAG.">
+  <meta name="author" content="MD. AL AMIN SOHAG">
+  <link rel="canonical" href="https://salsabilah.com/digit-theory.html">
+
+  <!-- Open Graph / Social Media Previews -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://salsabilah.com/digit-theory.html">
+  <meta property="og:title" content="Digit Theory: Modeling Money and Digital Identity as Dynamic Economic Variables">
+  <meta property="og:description" content="A conceptual mathematical framework exploring money and digital identity as dynamic variables within structured economic systems.">
+
+  <!-- Structured Data (TechArticle Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Digit Theory: Modeling Money and Digital Identity as Dynamic Economic Variables",
+    "datePublished": "2026-11-08",
+    "author": {
+      "@type": "Person",
+      "name": "MD. AL AMIN SOHAG"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SALSABILAH AMIN LIMITED",
+      "identifier": "TM Reg No: 018923558"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-footer: #0b1120;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-subtle: #1e293b;
+      --border-card: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.75;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      flex: 1;
+      max-width: 780px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .back-nav {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .back-nav:hover {
+      text-decoration: underline;
+    }
+
+    .article-header {
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .framework-tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.4px;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .article-body h2 {
+      color: var(--accent);
+      font-size: 1.35rem;
+      margin: 36px 0 12px 0;
+    }
+
+    .article-body p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin: 0 0 20px 0;
+    }
+
+    .callout-box {
+      background: var(--bg-secondary);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .callout-box strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      padding: 28px 20px;
+      background: var(--bg-footer);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 12px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">SALSABILAH AMIN LIMITED</a>
+      <nav class="nav-links">
+        <a href="index.html">Portal</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Research Blog</a>
+        <a href="mailto:seo@salsabilah.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="blog.html" class="back-nav">← Back to Research Archive</a>
+
+    <article>
+      <div class="article-header">
+        <span class="framework-tag">Framework 01 · Digit Theory</span>
+        <h1>Digit Theory: Modeling Money and Digital Identity as Dynamic Economic Variables</h1>
+        <div class="meta">
+          By <strong>MD. AL AMIN SOHAG</strong> · Published November 8, 2026 · Economic Systems Modeling
+        </div>
+      </div>
+
+      <div class="article-body">
+        <p>
+          Conventional macroeconomic models frequently treat currency supply as an aggregate scalar and market participants as interchangeable, static nodes. In an era defined by programmable infrastructure and continuous cross-border verification, this separation no longer reflects operational reality.
+        </p>
+
+        <h2>1. Core Premise</h2>
+        <p>
+          <strong>Digit Theory</strong> establishes a mathematical framework in which monetary units and verified digital identity function as coupled, dynamic variables. Rather than viewing transaction velocity in isolation, the model evaluates how identity assurance directly alters systemic friction, trust latency, and capital allocation efficiency.
+        </p>
+
+        <div class="callout-box">
+          <strong>Foundational Axiom</strong>
+          In a digitized economy, the utility and velocity of a unit of capital are proportional to the cryptographic and institutional verifiability of the identity layer through which it moves.
+        </div>
+
+        <h2>2. Implications for Industrial Resilience</h2>
+        <p>
+          When supply chains and enterprise ecosystems integrate verified identity layers directly into settlement architectures, counterparty risk drops measurably. Digit Theory provides quantitative parameters for stress-testing how localized identity or network disruptions propagate across broader economic grids.
+        </p>
+
+        <h2>3. Next Phase of Research</h2>
+        <p>
+          Ongoing modeling at <strong>SALSABILAH AMIN LIMITED</strong> focuses on integrating Digit Theory variables with the <em>SOHAG Filter</em> to simulate multi-node industrial settlement under high-entropy conditions.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Portal</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Research Blog</a>
+      <a href="https://github.com/SalsabilahEmpires" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <div>© 2026 <strong>SALSABILAH AMIN LIMITED</strong>. All Rights Reserved.</div>
+  </footer>
+
+</body>
+</html>
