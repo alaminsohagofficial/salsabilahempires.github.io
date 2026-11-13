@@ -1,5 +1,5 @@
 # MD. AL AMIN SOHAG
-### Strategic Researcher | Founder of Salsabilah Amin Empires Ltd
+### Strategic Researcher | Founder of SALSABILAH AMIN LIMITED
 
 Welcome to the official strategic research repository. This platform serves as a central hub for industrial resilience frameworks, digital infrastructure strategy, and next-generation economic systems modeling.
 
@@ -22,7 +22,7 @@ In-depth research and analysis of digital infrastructure resilience across major
 ---
 
 ## 🛡️ Corporate Identity & Credentials
-**Salsabilah Amin Empires Ltd** operates as the primary entity for these global research initiatives.
+**SALSABILAH AMIN LIMITED** operates as the primary entity for these global research initiatives.
 
 * **Registered Trade Mark:** Reg No: 018923558
 * **Compliance:** Cyber Essentials (Micro) Certified
@@ -52,4 +52,4 @@ This repository houses:
 - Digital Infrastructure Concepts
 
 ---
-© 2026 **Salsabilah Amin Empires Ltd**. All Rights Reserved.
+© 2026 **SALSABILAH AMIN LIMITED**. All Rights Reserved.
